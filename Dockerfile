@@ -24,6 +24,9 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py \
  && pip install awscli --upgrade --user \
  && aws --version
 
+RUN pip install boto \
+ && pip install boto3
+
 RUN curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest \
  && chmod +x /usr/local/bin/ecs-cli \
  && ecs-cli --version
