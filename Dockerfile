@@ -20,6 +20,7 @@ RUN apk --update add ansible
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py \
  && python get-pip.py --user \
+ && pip install docker-py \
  && pip install awscli --upgrade --user \
  && aws --version
 
